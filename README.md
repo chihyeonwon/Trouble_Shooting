@@ -54,6 +54,44 @@ _binding = null 이후에 정리하지 못한 지연된 작업이( 웹뷰의 콜
 onCreateView에서 뷰 바인딩
 onViewCreated 뷰가 생성되고 난 후 UI 요소들을 연결한다.
 ```
+## 4. 질문에 대한 튜터님의 답변
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/82577c3a-896a-4754-8bb4-6824026635a3)
+```kotlin
+class MainActivity : AppCompatActivity() { 
+    private lateinit var binding: ActivityMainBinding 
+    override fun onCreate(savedInstanceState: Bundle?) {    
+        super.onCreate(savedInstanceState) binding =    
+        ActivityMainBinding.inflate(layoutInflater) setContentView(binding.root) }  
+    }
+
+```
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/d5ce5c32-38bb-4eda-b1d5-182adbabffe8)
+```kotlin
+class WeatherHomeFragment : Fragment() { 
+     private var _binding: FragmentWeatherHomeBinding? = null 
+    // This property is only valid between onCreateView and// onDestroyView. 
+private val binding get() = _binding!! 
+
+    // 1. onCreateView에서 뷰를 생성하고 binding을 초기화 함
+override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? { 
+        _binding = FragmentWeatherHomeBinding.inflate(inflater, container, false)         
+        return binding.root 
+    } 
+   // 2. onViewCreated에서 뷰가 생성된 이후 UI 작업을 진행
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) { super.onViewCreated(view, savedInstanceState)     
+        binding.buttonFirst.setOnClickListener {   
+      findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)    
+        } 
+    } 
+
+   // 3. onDestroyView에서 뷰가 소멸될 때 binding을 해제함
+override fun onDestroyView() { 
+         super.onDestroyView() _binding = null } }
+```
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/af07fec5-304b-4236-ac06-6b9ec4638ca5)
+
+
+
 ## 5. 경험 - SharedPreference를 사용하여 앱 내에 데이터를 저장하고자 한다.
 1. PreferenceUtil 클래스 파일 생성
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/ea69f208-4ec7-4878-87ef-047ddf96f7cd)
