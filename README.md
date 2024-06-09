@@ -54,3 +54,36 @@ _binding = null 이후에 정리하지 못한 지연된 작업이( 웹뷰의 콜
 onCreateView에서 뷰 바인딩
 onViewCreated 뷰가 생성되고 난 후 UI 요소들을 연결한다.
 ```
+## 5. 경험 - SharedPreference를 사용하여 앱 내에 데이터를 저장하고자 한다.
+1. PreferenceUtil 클래스 파일 생성
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/ea69f208-4ec7-4878-87ef-047ddf96f7cd)
+```
+데이터베이스에 저장할 데이터의 자료형과 함수를 호출할 때 형식(틀, 매개변수)을 지정해줄 수 있다.
+getString, getBoolean 만 정의하였지만 추가로 Float, Int, StringSet 등을 정의하여 사용할 수 있다.
+```
+2. 데이터를 저장할 클래스에 싱글톤 패턴으로 preference 객체 생성
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/1ad642a7-bec8-48cb-ba4b-472873143695)
+```
+SharedPreference 데이터베이스를 사용할 클래스에 싱글톤 패턴으로 preferences 객체를 생성해주고 초기화한다.
+```
+3. 데이터베이스에 데이터 저장하기
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/f866fe5e-409c-45e9-8deb-91142c3861a3)
+```
+저장할 때는 PreferenceUtil에 정의한 setBoolean 메서드를 사용한다.
+예시는 스위치의 체크 유무를 확인하여 체크 시(활성화 시) 데이터베이스의 noti 키값에 true Boolean 값을 넣어주는 예시이다. 
+
+저장되는 위치는 내장 메모리의 앱 폴더에 XML 파일로 저장된다.
+```
+4. 데이터베이스의 데이터를 가져오기
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/d9b9df8f-d77b-4f1a-8286-429d87a3f5ca)
+```
+가져올 때는 싱글톤 패턴으로 정의한 클래스.객체를 사용하여 getBoolean 메서드를 호출한다.
+이렇게 호출한 값을 저장할 변수를 선언하여 넣어준다.
+```
+```
+ps. 앱의 설정을 구성할 때 AndroidX의 Preference를 이용할 것을 권장하고 있다. AndroidX 프리펀스 사용 선언(exclude lifecycle, lifecycle-viewmodel)
+하고 xml 폴더 밑에 settings.xml 파일에 SwitchPreferencCompat 스위치를 사용하는 것이 원칙이다.
+```
+
+
+
