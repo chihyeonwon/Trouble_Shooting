@@ -1,4 +1,5 @@
 시행착오에 대해 스스로 문제를 해결한 능력과 경험 = 실력
+[스택오버플로우](https://stackoverflow.com/)
 
 ## 문제상황
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/5e6c28a8-ba00-4e4a-8ff6-d03ae43332b7)
