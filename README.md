@@ -123,7 +123,7 @@ ps. 앱의 설정을 구성할 때 AndroidX의 Preference를 이용할 것을 �
 하고 xml 폴더 밑에 settings.xml 파일에 SwitchPreferencCompat 스위치를 사용하는 것이 원칙이다.
 ```
 5. RecyclerView를 생성할 때 화면을 가득 채우고 싶은 상황에 대한 질문
-![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/c48434d6-6ba4-4245-9ec0-effa04a623d5)
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/83052449-ff40-492f-ba97-f63db1ca932d)
 ```
 layout_width와 layout_height가 match_parent일 것이라고 예상했으나 0dp로 줘야 하는 이유 질문
 ```
