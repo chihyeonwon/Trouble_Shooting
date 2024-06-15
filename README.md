@@ -129,6 +129,10 @@ layout_width와 layout_height가 match_parent일 것이라고 예상했으나 0d
 ```
 ## 6. 답변
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/e4f60ae3-8781-4d1b-b934-3d922b726736)     
+```
+Constraint 레이아웃 안에서 width와 height 속성의 값으로 match_parent를 주는 것을 권장하지 않는다.
+parent로 지정하고자 한다면 match_constraint 라는 특수한 행동으로 0dp를 주면 된다.
+```
 [Constraint Layout 개발 문서](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout#dimensions-constraints)     
 ## 7. 이미지뷰 clipToOutline 속성 경험
 ```
