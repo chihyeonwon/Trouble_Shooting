@@ -128,7 +128,8 @@ ps. 앱의 설정을 구성할 때 AndroidX의 Preference를 이용할 것을 �
 layout_width와 layout_height가 match_parent일 것이라고 예상했으나 0dp로 줘야 하는 이유 질문
 ```
 ## 6. 답변
-
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/e4f60ae3-8781-4d1b-b934-3d922b726736)
+[Constraint Layout 개발 문서](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout#dimensions-constraints)
 ## 7. 이미지뷰 clipToOutline 속성 경험
 ```
 ImageView의 백그라운드에 모서리를 둥글게하는 xml 레이아웃을 추가한 후 clipToOutline="true"로 지정할 때 오류 발생
