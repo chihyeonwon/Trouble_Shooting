@@ -156,3 +156,32 @@ sealed 클래스의 서브 클래스 각각에 대해 여러 개의 인스턴스
 sealed 클래스의 계층을 생성할 수 있음
 Sealed Class 는 Enum Class 의 확장판과도 같다. 제한적인 계층관계를 효과적으로 표현할 수 있고, 이에 따라 when 문 사용 시 효과적으로 사용할 수 있다.
 ```
+
+## 9. @Parcelize 란?
+[Parcelize 란?](https://onlyfor-me-blog.tistory.com/entry/Android-Parcelize%EB%9E%80)
+```
+앱을 개발하다 보면 다른 화면으로 넘어갈 때 데이터를 전달해야 할 수 있다.
+ 앱에서 데이터를 전달해야 한다면 인텐트에 putExtra()로 넣어서 이동할 화면으로 보내고,
+ 해당 화면에서 받아서 사용하는 게 가장 기초적이면서 일반적인 방법이라고 할 수 있다.
+
+이 때 보내야 하는 데이터가 객체 형태라면 어떻게 해야 할까?
+data class를 보내야 하는 경우 그대로 putExtra()를 사용하면 컴파일 에러가 발생한다.
+에러 내용은 "None of the following functions can be called with the arguments supplied."다.
+
+Parcelable은 안드로이드의 IPC(Inter-Process Communication)를 위해 만들어진 인터페이스다.
+IPC는 같은 시스템에서 실행되는 서로 다른 프로세스 간 데이터를 전송하는 매커니즘이다.
+안드로이드에선 이걸로 다른 앱 또는 앱 안의 컴포넌트 간에 데이터를 전달해서 통신할 수 있게 된다.
+이 인터페이스를 사용하면 객체를 이동시키기 위한 방법인 마샬링(또는 직렬화)를 정의할 수 있게 된다.
+그러나 마샬링 정의 과정이 복잡하기 때문에 에러가 발생할 확률이 올라가고, 코드가 길어지기 때문에 가독성도 떨어질 수 있다.
+```
+#### Parcelize Plugin
+```kotlin
+plugins {
+    id 'kotlin-android-extensions'
+}
+```
+```
+Parcelable과 @Parcelize다. Serializable에 비해 속도는 빨라졌고, 좀 더 코드 가독성을 올릴 수 있게 된 것이다.
+객체를 인텐트에 담아서 보내야 할 경우 Parcelable과 @Parcelize를 사용하면
+편하고 빠르게 다른 화면으로 이동시킬 수 있으니 필요한 경우 잘 사용하면 좋을 것이다.
+```
