@@ -143,3 +143,16 @@ API 31이상부터 적용 가능 -> minSdk의 값 수정
 ```
 ## 7. 분석 답변
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/057c9985-2d3c-4e26-a85a-aaacda08458c)
+
+## 8. sealed class 란?
+[sealed class 알아보기](https://velog.io/@haero_kim/Kotlin-Sealed-Class-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
+```
+sealed 클래스는 자기 자신이 추상 클래스이고, 자신을 상속받는 여러 서브 클래스들을 가질 수 있다.
+이를 사용하면 enum 클래스와 달리 상속을 지원하기 때문에, 상속을 활용한 풍부한 동작을 구현할 수 있다.
+
+Sealed Class 의 이점
+sealed 클래스의 서브 클래스 각각에 대해 여러 개의 인스턴스 생성 가능
+때문에 상태값을 유동적으로 변경할 수 있음
+sealed 클래스의 계층을 생성할 수 있음
+Sealed Class 는 Enum Class 의 확장판과도 같다. 제한적인 계층관계를 효과적으로 표현할 수 있고, 이에 따라 when 문 사용 시 효과적으로 사용할 수 있다.
+```
