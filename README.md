@@ -201,3 +201,8 @@ Parcelable과 @Parcelize다. Serializable에 비해 속도는 빨라졌고, 좀 
  * 리소스 파일명은 자바의 이름 규칙을 위해할 수 없음
  * 리소스 파일명에서 알파벳 대문자를 이용할 수 없음 => 두 단어 연결 시 언더바(_) 사용
 ```
+## 11. Map 사용법
+[Map 사용법](https://math-coding.tistory.com/229)
+```
+
+```
