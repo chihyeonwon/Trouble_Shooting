@@ -185,7 +185,7 @@ Parcelable과 @Parcelize다. Serializable에 비해 속도는 빨라졌고, 좀 
 객체를 인텐트에 담아서 보내야 할 경우 Parcelable과 @Parcelize를 사용하면
 편하고 빠르게 다른 화면으로 이동시킬 수 있으니 필요한 경우 잘 사용하면 좋을 것이다.
 ```
-#### 10. R.java의 의미
+## 10. R.java의 의미
 ```
 [ R. 의 의미 ]
 - R. : R은 Resource고 안드로이드 시스템에서 R.java 파일로 리소스 관리를 해주는 것.
