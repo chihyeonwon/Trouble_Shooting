@@ -208,7 +208,7 @@ Parcelable과 @Parcelize다. Serializable에 비해 속도는 빨라졌고, 좀 
 
 ```
 ## 12. 안드로이드 에뮬레이터 Location 흰 화면 문제 상황
-![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/f9efee77-4735-42f1-a69e-29af5a537536)
-
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/4a9621bf-7b72-4bc9-b620-3748b13e202d)
 ## 12 해결 에뮬레이터 버전 업그레이드
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/f9efee77-4735-42f1-a69e-29af5a537536)
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/7931bda4-7322-4b16-898d-41dd16d3e30a)
