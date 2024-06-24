@@ -212,3 +212,8 @@ Parcelable과 @Parcelize다. Serializable에 비해 속도는 빨라졌고, 좀 
 ## 12 해결 에뮬레이터 버전 업그레이드
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/f9efee77-4735-42f1-a69e-29af5a537536)
 ![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/7931bda4-7322-4b16-898d-41dd16d3e30a)
+![image](https://github.com/chihyeonwon/Trouble_Shooting/assets/58906858/6c2a78a8-46e9-4503-8623-cca92017acc7)
+```
+5월 중순 부터 이전 에뮬레이터 버전에서 Google Map의 미리보기 기능 지원을 중단하여서 발생한 문제였습니다.
+Setting- Android Sdk에서 에뮬레이터의 버전을 업그레이드해서 문제를 해결하였습니다.
+```
